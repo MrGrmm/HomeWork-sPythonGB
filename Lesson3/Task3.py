@@ -16,11 +16,14 @@ print(my_list)
 new_list = []
 
 for i in range(len(my_list)):
-    new_list.append((my_list[i] % 1))
+    if my_list[i] % 1 != 0:
+        new_list.append((my_list[i] % 1))
+
+print(new_list)
 
 biggest = max(new_list) * 100
 littles = min(new_list) * 100
 
-# print(biggest)
-# print(littles)
+print(biggest)
+print(littles)
 print(f'The difference between the maximum and minimum value of the fractional part = {floor(biggest - littles)/ 100}')
