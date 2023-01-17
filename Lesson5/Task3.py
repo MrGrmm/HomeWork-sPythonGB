@@ -39,6 +39,7 @@ def main():
         file = open("File2.txt", 'a')
         file.write(f'  => {encode(init_str)}')
 
+
 main()
 
 
