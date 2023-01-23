@@ -2,12 +2,15 @@
 import random
 
 
-my_list = []
+# my_list = []
 
-for _ in range(10):
-    index = random.randint(0,3)
-    my_list.append(round(random.uniform(0,10), index))
-    
+# for _ in range(10):
+#     index = random.randint(0,3)
+#     my_list.append(round(random.uniform(0,10), index))
+
+my_list = [round(random.uniform(0,10), random.randint(0,3)) for _ in range(10)]     #
+
+
 print(f'Initial list 👇\n{my_list}')
 sum_of_item = 0
 for i in range(1, len(my_list), 2):

@@ -6,11 +6,16 @@
 while True:
     try:
         num = input('Input your num: ').replace(',','').replace('-','')
-        sum = 0
+        print(sum(list(map(int, [item for item in num]))) )       #
+        # sum_of_dig = 0
 
-        for i in range(len(num)):
-            sum += int(num[i])
+        # for i in range(len(num)):
+        #     sum += int(num[i])
+
+        # print(f"Sum of digit's = {sum_of_dig}")
         break
     except:
         print('Try again')    
-print(sum)
+
+
+

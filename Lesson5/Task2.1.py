@@ -2,10 +2,8 @@ from tkinter import *
 import random, time
 
 
-
-
 def stop_game():
-    global global_left
+    global game_left
     for item in game_left:
         buttons[item].config(bg='white', state='disabled')
 
@@ -54,14 +52,13 @@ def push(b):
         turn += 1
 
 
-
 game = [None] * 9
 game_left = list(range(9))
 turn = 0
 
 root = Tk()
-label = Label(width=28, text="Tic-tac-toe game", font=('Arial', 20, 'bold'))
-buttons = [Button(width=5, height=2, font=('Arial', 50, 'bold'), bg="green", command=lambda x=i: push(x)) for i in range(9)]
+label = Label(width=28, text="Tic-tac-toe game", font=('Arial', 10, 'bold'))
+buttons = [Button(width=5, height=2, font=('Arial', 20, 'bold'), bg="green", command=lambda x=i: push(x)) for i in range(9)]
 
 
 label.grid(row=0, column=0, columnspan=3)
@@ -73,5 +70,6 @@ for i in range(9):
         row += 1
         col = 0
 
-root.mainloop()
+root.mainloop()       
+
 

@@ -3,15 +3,17 @@
 from random import randint
 
 
-my_list = []
+# my_list = []
 
-for i in range(randint(1, 10)):
-    while True:
-        try:
-            my_list.append(int(input(f'Position number {i+1}: ')))
-            break
-        except:
-            print('Try again')
+# for i in range(randint(1, 10)):
+#     while True:
+#         try:
+#             my_list.append(int(input(f'Position number {i+1}: ')))
+#             break
+#         except:
+#             print('Try again')
+
+my_list = [int(input(f'Position number {i+1}: ')) for i in range(randint(1, 10))]       #
 
 print(my_list)
 

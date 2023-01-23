@@ -1,6 +1,7 @@
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
-fib1 = fib2 = 1
+fib1 = 1
+fib2 = 1
 num = int(input('Enter a number for the desired sequence: '))
 fib_list = [fib1, fib2]
 

@@ -10,16 +10,20 @@ while True:
     except:
         print('Try again')
 
-my_list = []
+# my_list = []
 
-for i in range(1, n + 1):
-    my_list.append(round((1 + 1 / i) ** i, 2))
+# for i in range(1, n + 1):
+#     my_list.append(round((1 + 1 / i) ** i, 2))
+
+my_list = [round((1 + 1 / i) ** i, 2) for i in range(1, n + 1)]         # 
 
 print(my_list)
 
-sum = 0
+print(f'Sum of numbers = {sum(my_list)}')           #
 
-for item in my_list:
-    sum += item
+# sum = 0
 
-print(sum)
+# for item in my_list:
+#     sum += item
+
+# print(sum)
