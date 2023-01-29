@@ -16,6 +16,7 @@ for i in range(len(negfib_list)):
 else:
     negfib_list.append(0)
 
+
 res_list = negfib_list + fib_list
 
 print(f'For the number {num}, the Fibonacci and Negafibonacci sequence: ')
