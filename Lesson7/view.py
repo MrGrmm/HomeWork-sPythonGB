@@ -14,6 +14,7 @@ def main_menu() -> int:
     while True:
         try:
             user_input = int(input('\tВведи команду >: '))
+            print()
             break
         except:
             print('ERROR ')
@@ -43,7 +44,12 @@ def feed_back():
     else:
         feed_back()
  
-
+def db_success(db: list):
+    if db:
+        return True
+    else:
+        print('\tТелефонная книга пуста или не открыта\n')
+        return False
 
 
 
@@ -57,15 +63,7 @@ def show_all(db: list):
             for v in db[i].values():
                 print(f'{v}', end=' ')
             print()
-        feed_back()
-def db_success(db: list):
-    if db:
-        feed_back()
-        return True
-    else:
-        print('\tТелефонная книга пуста или не открыта')
-        feed_back()
-        return False
+        print()
 
 def save_db(new_db, path):
     if db_success(new_db):
@@ -94,7 +92,6 @@ def edit_contact(db):
             print(f'Последнее значение:  {key}:  {value}')
             new_value = input(f'\tВведите новое значение для {key}: ')            
             db[u_input][key] = new_value            
-        feed_back()
 
 def delete_contact(db):
     if db_success(db):
@@ -106,13 +103,14 @@ def delete_contact(db):
 def find_contact(db):
     if db_success(db):
         find = input('\tВведите имя/фам/номер: ')
+        print()
         flag = True
         for i, item in enumerate(db):
             if find in item.values():
-                print('\tНомер находится под индексом:', i + 1, item)
+                print('\tНомер находится под индексом:', i + 1, item, '\n')
                 flag = False
         if flag:
-            print('\tТакого контакта нет')
+            print('\tТакого контакта нет\n')
     feed_back()     
 
 def exit_program():
